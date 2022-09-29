@@ -23,6 +23,7 @@ const baseConfig = {
           '.ts',
           '.tsx',
           '.json',
+          '.svg',
           'mp4',
         ],
         root: ['./src'],

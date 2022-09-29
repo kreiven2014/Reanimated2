@@ -1,28 +1,28 @@
-import * as React from 'react'
+import * as React from 'react';
 import {
   View,
   StyleSheet,
   Text,
   Dimensions,
   TouchableWithoutFeedback,
-} from 'react-native'
-import PlayIcon from '../assets/play.svg'
-import Close from '../assets/close.svg'
+} from 'react-native';
+import PlayIcon from '../assets/play.svg';
+import Close from '../assets/close.svg';
 // import {Icon} from 'expo';
-import PlayerContext from '../PlayerContext'
+import PlayerContext from '../PlayerContext';
 
-const { width } = Dimensions.get('window')
-export const PLACEHOLDER_WIDTH = width / 3
+const {width} = Dimensions.get('window');
+export const PLACEHOLDER_WIDTH = width / 3;
 
 type PlayerControlsProps = {
-  title: string
-  onPress: () => void
-}
+  title: string;
+  onPress: () => void;
+};
 
 // export default class PlayerControls extends React.PureComponent<PlayerControlsProps> {
 const PlayerControls = (props: PlayerControlsProps) => {
-  const { setVideo } = React.useContext(PlayerContext)
-  const { title, onPress } = props
+  const {setVideo} = React.useContext(PlayerContext);
+  const {title, onPress} = props;
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.container}>
@@ -36,10 +36,10 @@ const PlayerControls = (props: PlayerControlsProps) => {
         </TouchableWithoutFeedback>
       </View>
     </TouchableWithoutFeedback>
-  )
-}
+  );
+};
 
-export default PlayerControls
+export default PlayerControls;
 
 const styles = StyleSheet.create({
   container: {
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
     color: 'gray',
     padding: 8,
   },
-})
+});
