@@ -23,7 +23,6 @@ import PlayerControls, {PLACEHOLDER_WIDTH} from './PlayerControls';
 import Constants from 'expo-constants';
 
 const {width, height} = Dimensions.get('window');
-// const statusBarHeight = 64;
 const minHeight = 64;
 const midBound = height - 64 * 3;
 const upperBound = midBound + minHeight;
@@ -132,6 +131,7 @@ const VideoModal = (props: VideoModalProps) => {
       [0, midBound],
       [height, 0],
     );
+    console.log('containerHeight', containerHeight);
     return {
       height: containerHeight,
     };
