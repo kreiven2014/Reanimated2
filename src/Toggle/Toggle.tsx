@@ -61,7 +61,6 @@ const CircularSlider = () => {
     onActive: (event, ctx) => {
       'worklet';
 
-      console.log('event', event);
       angle.value = cartesianToPolar(event.x, event.y);
     },
     onEnd: _ => {
