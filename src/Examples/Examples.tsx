@@ -60,6 +60,10 @@ const examples = [
     screen: 'Youtube',
     title: '💧 Youtube',
   },
+  {
+    screen: 'Toggle',
+    title: 'Toggle',
+  },
 ] as const;
 
 const styles = StyleSheet.create({

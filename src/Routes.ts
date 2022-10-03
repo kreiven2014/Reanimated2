@@ -13,4 +13,5 @@ export type Routes = {
   Darkroom: undefined;
   LiquidSwipe: undefined;
   Youtube: undefined;
+  Toggle: undefined;
 };
