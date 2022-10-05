@@ -14,4 +14,5 @@ export type Routes = {
   LiquidSwipe: undefined;
   Youtube: undefined;
   Toggle: undefined;
+  SkateChallenge: undefined;
 };

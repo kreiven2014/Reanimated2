@@ -17,6 +17,8 @@ import Darkroom, {assets as darkroomAssets} from './src/Darkroom';
 import LiquidSwipe, {assets as liquidSwipeAssets} from './src/LiquidSwipe';
 import YoutubeNavigator from './src/youtube/YoutubeNavigator';
 import Toggle from './src/Toggle';
+import SkateChallenge from './src/SkateChallenge/SkateList';
+import SkateDetail from './src/SkateChallenge/SkateDetail';
 
 const fonts = {
   'SFProDisplay-Bold': require('./assets/fonts/SFPro/SF-Pro-Display-Bold.otf'),
@@ -30,6 +32,8 @@ const fonts = {
   'GothamRounded-Medium': require('./assets/fonts/GothamRounded/GothamRounded-Medium.otf'),
   'GothamRounded-Bold': require('./assets/fonts/GothamRounded/GothamRounded-Bold.otf'),
   'GothamRounded-Light': require('./assets/fonts/GothamRounded/GothamRounded-Light.otf'),
+  // 'Ridley Grotesk': require('./assets/fonts/Radomir Tinkov - RidleyGrotesk-Regular.otf'),
+  // 'Ridley Grotesk Bold': require('./assets/fonts/Radomir Tinkov - RidleyGrotesk-Bold.otf'),
 };
 
 const assets = [
@@ -158,6 +162,22 @@ const AppNavigator = () => (
       component={Toggle}
       options={{
         title: 'Toggle',
+      }}
+    />
+    <Stack.Screen
+      name="SkateChallenge"
+      component={SkateChallenge}
+      options={{
+        title: 'SkateChallenge',
+        header: () => null,
+      }}
+    />
+    <Stack.Screen
+      name="SkateDetail"
+      component={SkateDetail}
+      options={{
+        title: 'SkateDetail',
+        header: () => null,
       }}
     />
   </Stack.Navigator>

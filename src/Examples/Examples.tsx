@@ -64,6 +64,10 @@ const examples = [
     screen: 'Toggle',
     title: 'Toggle',
   },
+  {
+    screen: 'SkateChallenge',
+    title: 'SkateChallenge',
+  },
 ] as const;
 
 const styles = StyleSheet.create({

@@ -62,6 +62,7 @@ const CircularSlider = () => {
       'worklet';
 
       angle.value = cartesianToPolar(event.x, event.y);
+      // runOnJS(onPress)({ x, y }) // example how to use runOnJS
     },
     onEnd: _ => {
       //   x.value = withSpring(0);
