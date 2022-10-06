@@ -1,120 +1,7 @@
-// /**
-//  * Sample React Native App
-//  * https://github.com/facebook/react-native
-//  *
-//  * @format
-//  * @flow strict-local
-//  */
-
-// import React from 'react';
-// import type {Node} from 'react';
-// import {
-//   SafeAreaView,
-//   ScrollView,
-//   StatusBar,
-//   StyleSheet,
-//   Text,
-//   useColorScheme,
-//   View,
-// } from 'react-native';
-
-// import {
-//   Colors,
-//   DebugInstructions,
-//   Header,
-//   LearnMoreLinks,
-//   ReloadInstructions,
-// } from 'react-native/Libraries/NewAppScreen';
-
-// const Section = ({children, title}): Node => {
-//   const isDarkMode = useColorScheme() === 'dark';
-//   return (
-//     <View style={styles.sectionContainer}>
-//       <Text
-//         style={[
-//           styles.sectionTitle,
-//           {
-//             color: isDarkMode ? Colors.white : Colors.black,
-//           },
-//         ]}>
-//         {title}
-//       </Text>
-//       <Text
-//         style={[
-//           styles.sectionDescription,
-//           {
-//             color: isDarkMode ? Colors.light : Colors.dark,
-//           },
-//         ]}>
-//         {children}
-//       </Text>
-//     </View>
-//   );
-// };
-
-// const App: () => Node = () => {
-//   const isDarkMode = useColorScheme() === 'dark';
-
-//   const backgroundStyle = {
-//     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-//   };
-
-//   return (
-//     <SafeAreaView style={backgroundStyle}>
-//       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-//       <ScrollView
-//         contentInsetAdjustmentBehavior="automatic"
-//         style={backgroundStyle}>
-//         <Header />
-//         <View
-//           style={{
-//             backgroundColor: isDarkMode ? Colors.black : Colors.white,
-//           }}>
-//           <Section title="Step One">
-//             Edit <Text style={styles.highlight}>App.js</Text> to change this
-//             screen and then come back to see your edits.
-//           </Section>
-//           <Section title="See Your Changes">
-//             <ReloadInstructions />
-//           </Section>
-//           <Section title="Debug">
-//             <DebugInstructions />
-//           </Section>
-//           <Section title="Learn More">
-//             Read the docs to discover what to do next:
-//           </Section>
-//           <LearnMoreLinks />
-//         </View>
-//       </ScrollView>
-//     </SafeAreaView>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   sectionContainer: {
-//     marginTop: 32,
-//     paddingHorizontal: 24,
-//   },
-//   sectionTitle: {
-//     fontSize: 24,
-//     fontWeight: '600',
-//   },
-//   sectionDescription: {
-//     marginTop: 8,
-//     fontSize: 18,
-//     fontWeight: '400',
-//   },
-//   highlight: {
-//     fontWeight: '700',
-//   },
-// });
-
-// export default App;
-
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {Routes} from './src/Routes';
+import {Routes} from 'src/Routes';
 import Examples from './src/Examples';
 import Rainbow from './src/Rainbow';
 import Chrome from './src/Chrome';
@@ -129,6 +16,10 @@ import Bedtime from './src/Bedtime';
 import Darkroom, {assets as darkroomAssets} from './src/Darkroom';
 import LiquidSwipe, {assets as liquidSwipeAssets} from './src/LiquidSwipe';
 import YoutubeNavigator from './src/youtube/YoutubeNavigator';
+import Toggle from './src/Toggle';
+import SkateChallenge from './src/SkateChallenge/SkateList';
+import SkateDetail from './src/SkateChallenge/SkateDetail';
+import {Wallet} from './src/Skia/Wallet';
 
 const fonts = {
   'SFProDisplay-Bold': require('./assets/fonts/SFPro/SF-Pro-Display-Bold.otf'),
@@ -142,6 +33,8 @@ const fonts = {
   'GothamRounded-Medium': require('./assets/fonts/GothamRounded/GothamRounded-Medium.otf'),
   'GothamRounded-Bold': require('./assets/fonts/GothamRounded/GothamRounded-Bold.otf'),
   'GothamRounded-Light': require('./assets/fonts/GothamRounded/GothamRounded-Light.otf'),
+  // 'Ridley Grotesk': require('./assets/fonts/Radomir Tinkov - RidleyGrotesk-Regular.otf'),
+  // 'Ridley Grotesk Bold': require('./assets/fonts/Radomir Tinkov - RidleyGrotesk-Bold.otf'),
 };
 
 const assets = [
@@ -154,7 +47,7 @@ const assets = [
   ...liquidSwipeAssets,
 ];
 
-const Stack = createStackNavigator<Routes>();
+const Stack = createStackNavigator();
 const AppNavigator = () => (
   <Stack.Navigator>
     <Stack.Screen
@@ -261,6 +154,38 @@ const AppNavigator = () => (
       component={YoutubeNavigator}
       options={{
         title: 'Youtube',
+        header: () => null,
+        gestureEnabled: false,
+      }}
+    />
+    <Stack.Screen
+      name="Toggle"
+      component={Toggle}
+      options={{
+        title: 'Toggle',
+      }}
+    />
+    <Stack.Screen
+      name="SkateChallenge"
+      component={SkateChallenge}
+      options={{
+        title: 'SkateChallenge',
+        header: () => null,
+      }}
+    />
+    <Stack.Screen
+      name="SkateDetail"
+      component={SkateDetail}
+      options={{
+        title: 'SkateDetail',
+        header: () => null,
+      }}
+    />
+    <Stack.Screen
+      name="Wallet"
+      component={Wallet}
+      options={{
+        title: 'Wallet',
         header: () => null,
         gestureEnabled: false,
       }}

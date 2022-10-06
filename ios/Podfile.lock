@@ -306,6 +306,35 @@ PODS:
     - glog
   - react-native-safe-area-context (3.2.0):
     - React-Core
+  - react-native-skia (0.1.154):
+    - React
+    - React-callinvoker
+    - React-Core
+    - react-native-skia/Api (= 0.1.154)
+    - react-native-skia/Jsi (= 0.1.154)
+    - react-native-skia/RNSkia (= 0.1.154)
+    - react-native-skia/SkiaHeaders (= 0.1.154)
+    - react-native-skia/Utils (= 0.1.154)
+  - react-native-skia/Api (0.1.154):
+    - React
+    - React-callinvoker
+    - React-Core
+  - react-native-skia/Jsi (0.1.154):
+    - React
+    - React-callinvoker
+    - React-Core
+  - react-native-skia/RNSkia (0.1.154):
+    - React
+    - React-callinvoker
+    - React-Core
+  - react-native-skia/SkiaHeaders (0.1.154):
+    - React
+    - React-callinvoker
+    - React-Core
+  - react-native-skia/Utils (0.1.154):
+    - React
+    - React-callinvoker
+    - React-Core
   - react-native-webview (11.2.3):
     - React-Core
   - React-perflogger (0.66.4)
@@ -379,7 +408,7 @@ PODS:
     - React
   - RNGestureHandler (2.6.2):
     - React-Core
-  - RNReanimated (2.3.3):
+  - RNReanimated (2.3.1):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -474,6 +503,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - "react-native-skia (from `../node_modules/@shopify/react-native-skia`)"
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -579,6 +609,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-skia:
+    :path: "../node_modules/@shopify/react-native-skia"
   react-native-webview:
     :path: "../node_modules/react-native-webview"
   React-perflogger:
@@ -668,6 +700,7 @@ SPEC CHECKSUMS:
   React-jsinspector: d0374f7509d407d2264168b6d0fad0b54e300b85
   React-logger: 933f80c97c633ee8965d609876848148e3fef438
   react-native-safe-area-context: f0906bf8bc9835ac9a9d3f97e8bde2a997d8da79
+  react-native-skia: f471faf3866e0850950c0c3731397647114e4855
   react-native-webview: 6520e3e7b4933de76b95ef542c8d7115cf45b68e
   React-perflogger: 93075d8931c32cd1fce8a98c15d2d5ccc4d891bd
   React-RCTActionSheet: 7d3041e6761b4f3044a37079ddcb156575fb6d89
@@ -684,7 +717,7 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: 0c357f3156fcb16c8589ede67cc036330b6698ca
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNGestureHandler: 4defbd70b2faf3d6761b82fa7880285241762cb0
-  RNReanimated: b676957fbbf477c5468335268e8fe6fbb0f630e5
+  RNReanimated: da3860204e5660c0dd66739936732197d359d753
   RNScreens: e8e8dd0588b5da0ab57dcca76ab9b2d8987757e0
   RNSharedElement: eb7d506733952d58634f34c82ec17e82f557e377
   RNSVG: 07037623c36f12e41312730622d5f6b3656227ca
