@@ -9,6 +9,10 @@ import {StyleGuide} from '../components';
 
 const examples = [
   {
+    screen: 'Wallet',
+    title: '🦉 Wallet',
+  },
+  {
     screen: 'Duolingo',
     title: '🦉 Duolingo',
   },

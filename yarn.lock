@@ -1893,6 +1893,14 @@
     color "^3.1.3"
     react-native-iphone-x-helper "^1.3.0"
 
+"@shopify/react-native-skia@^0.1.154":
+  version "0.1.154"
+  resolved "https://registry.yarnpkg.com/@shopify/react-native-skia/-/react-native-skia-0.1.154.tgz#f9af5786a14dc6b985bd73ebc736c200786e84e5"
+  integrity sha512-WS4FVN1dLuzPsMCBdul4dmVXTswy2XBwTlFjBWzWo+y5r19a0Uz7xJrUJeZOJM25OGwfnfBrUXmhyAXn/mX05g==
+  dependencies:
+    canvaskit-wasm "0.36.1"
+    react-reconciler "0.26.2"
+
 "@sideway/address@^4.1.3":
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/@sideway/address/-/address-4.1.4.tgz#03dccebc6ea47fdc226f7d3d1ad512955d4783f0"
@@ -2898,6 +2906,11 @@ caniuse-lite@^1.0.30001400:
   version "1.0.30001414"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001414.tgz#5f1715e506e71860b4b07c50060ea6462217611e"
   integrity sha512-t55jfSaWjCdocnFdKQoO+d2ct9C59UZg4dY3OnUlSZ447r8pUtIKdp0hpAzrGFultmTC+Us+KpKi4GZl/LXlFg==
+
+canvaskit-wasm@0.36.1:
+  version "0.36.1"
+  resolved "https://registry.yarnpkg.com/canvaskit-wasm/-/canvaskit-wasm-0.36.1.tgz#341df38ce7894a925064beaf9eeacbf7699c6633"
+  integrity sha512-6IHlBBc9zDQBTHiGuz4Rf0j/P/ulW24q/yW+QY517e7jwQoM0nJ1+L3h4wUpfC4eQrcpVPQY8ZFbqMbUCzDxTw==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -7486,6 +7499,15 @@ react-navigation-shared-element@^3.0.0:
   integrity sha512-U1BZp7dEdcTNHggfkq3WEBlJeg4HwFhFdj7a0i0Uql/7mg2IHQg/bZaqM2jQvJITkABge6Hz5fZixIF8jyzpkg==
   dependencies:
     hoist-non-react-statics "^3.3.2"
+
+react-reconciler@0.26.2:
+  version "0.26.2"
+  resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.26.2.tgz#bbad0e2d1309423f76cf3c3309ac6c96e05e9d91"
+  integrity sha512-nK6kgY28HwrMNwDnMui3dvm3rCFjZrcGiuwLc5COUipBK5hWHLOxMJhSnSomirqWwjPBJKV1QcbkI0VJr7Gl1Q==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    scheduler "^0.20.2"
 
 react-refresh@^0.4.0:
   version "0.4.3"
