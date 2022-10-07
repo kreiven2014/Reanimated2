@@ -39,6 +39,16 @@ const CircularSlider = () => {
     return (Math.atan((y - c.y) / (x - c.x)) + polarOffset) % tau;
   };
 
+  /* GESTURE HANDLER*/
+  const onTouch = useTouchHandler({
+    // onStart: (_) => {
+    // },
+    onActive: ({x, y}) => {
+      angle.current = cartesianToPolar(x, y);
+    },
+    onEnd: _ => {},
+  });
+
   /* RENDER PROPS*/
   const startCoord = polarToCartesian(0);
   const endCoord = useComputedValue(() => {
@@ -62,19 +72,11 @@ const CircularSlider = () => {
     const coords = polarToCartesian(angle.current);
     return coords.x;
   }, [angle]);
+
   const animatedCircleY = useComputedValue(() => {
     const coords = polarToCartesian(angle.current);
     return coords.y;
   }, [angle]);
-
-  const onTouch = useTouchHandler({
-    // onStart: (_) => {
-    // },
-    onActive: ({x, y}) => {
-      angle.current = cartesianToPolar(x, y);
-    },
-    onEnd: _ => {},
-  });
 
   return (
     <Canvas style={[{width, height}, styles.container]} onTouch={onTouch}>
