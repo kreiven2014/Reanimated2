@@ -12,7 +12,7 @@ import {PADDING} from '../Model';
 
 import type {GraphState} from './Selection';
 
-const sfMono = require('../../../assets/fonts/SFPro/SF-Pro-Display-Regular.otf');
+const sfMono = require('../../../../assets/fonts/SFPro/SF-Pro-Display-Regular.otf');
 const format = (value: number) =>
   '$ ' +
   Math.round(value)

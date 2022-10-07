@@ -20,6 +20,7 @@ import Toggle from './src/Toggle';
 import SkateChallenge from './src/SkateChallenge/SkateList';
 import SkateDetail from './src/SkateChallenge/SkateDetail';
 import {Wallet} from './src/Skia/Wallet';
+import SkiaCircularSlider from './src/Skia/CircularSlider';
 
 const fonts = {
   'SFProDisplay-Bold': require('./assets/fonts/SFPro/SF-Pro-Display-Bold.otf'),
@@ -187,6 +188,14 @@ const AppNavigator = () => (
       options={{
         title: 'Wallet',
         header: () => null,
+        gestureEnabled: false,
+      }}
+    />
+    <Stack.Screen
+      name="SkiaCircularSlider"
+      component={SkiaCircularSlider}
+      options={{
+        title: 'Wallet',
         gestureEnabled: false,
       }}
     />
