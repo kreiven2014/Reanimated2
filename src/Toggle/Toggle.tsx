@@ -53,6 +53,7 @@ const CircularSlider = () => {
   /* GESTURE HANDLER*/
   const gestureHandler = useAnimatedGestureHandler({
     onStart: (_, ctx) => {
+      // CTX!!!!!
       // why context used
       //   ctx.startX = x.value;
     },
