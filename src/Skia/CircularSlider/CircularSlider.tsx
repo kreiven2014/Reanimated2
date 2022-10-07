@@ -8,6 +8,7 @@ import {
   Path,
   useTouchHandler,
   dist,
+  DashPathEffect,
 } from '@shopify/react-native-skia';
 import React from 'react';
 import {Dimensions, StyleSheet} from 'react-native';
@@ -96,13 +97,17 @@ const CircularSlider = () => {
         <Circle
           r={r}
           c={c}
-          color="red"
-          //   fill="none"
+          color="#aaa"
           style="stroke"
-          // stroke="#aaa"
-          strokeWidth={strokeWidth}></Circle>
-        <Path style="stroke" strokeWidth={strokeWidth} path={path} />
-
+          strokeWidth={strokeWidth}>
+          <DashPathEffect intervals={[1, 6]} />
+        </Circle>
+        <Path
+          style="stroke"
+          strokeWidth={strokeWidth}
+          path={path}
+          color="lightblue"
+        />
         <Cursor x={animatedCircleX} y={animatedCircleY} width={width} />
       </Group>
     </Canvas>
