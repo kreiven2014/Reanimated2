@@ -7,6 +7,7 @@ import {
   vec,
   Path,
   useTouchHandler,
+  dist,
 } from '@shopify/react-native-skia';
 import React from 'react';
 import {Dimensions, StyleSheet} from 'react-native';
@@ -40,11 +41,22 @@ const CircularSlider = () => {
   };
 
   /* GESTURE HANDLER*/
+  const isGestureActive = useValue(false);
   const onTouch = useTouchHandler({
-    // onStart: (_) => {
-    // },
+    onStart: pt => {
+      if (
+        dist(
+          vec(animatedCircleX.current, animatedCircleY.current),
+          vec(pt.x, pt.y),
+        ) < 50
+      ) {
+        isGestureActive.current = true;
+      }
+    },
     onActive: ({x, y}) => {
-      angle.current = cartesianToPolar(x, y);
+      if (isGestureActive.current) {
+        angle.current = cartesianToPolar(x, y);
+      }
     },
     onEnd: _ => {},
   });
