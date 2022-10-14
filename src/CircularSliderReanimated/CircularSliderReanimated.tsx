@@ -11,7 +11,6 @@ import Svg, {Circle, Path} from 'react-native-svg';
 const {
   // atan,
   min,
-  max,
   PI,
 } = Math;
 
@@ -19,7 +18,6 @@ const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 const AnimatedSvg = Animated.createAnimatedComponent(Svg);
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
-const percentToRad = PI / 50;
 const tau = 2 * PI; // One turn
 const offset = tau * 0.25; // offset quarter turn, adjustable
 
@@ -27,9 +25,7 @@ const {width, height} = Dimensions.get('window');
 const smallestSide = min(width, height);
 
 const CircularSlider = () => {
-  // const value = max(99, this.props.value) * percentToRad;
-
-  // in case center changes we change this value and re-render whole circle
+  /* ANIMATION VALUES*/
   const cx = useSharedValue(width / 2);
   const cy = useSharedValue(height / 2);
 
@@ -54,8 +50,11 @@ const CircularSlider = () => {
     return (Math.atan((y - cy.value) / (x - cx.value)) + polarOffset) % tau;
   };
 
+  /* GESTURE HANDLER*/
   const gestureHandler = useAnimatedGestureHandler({
     onStart: (_, ctx) => {
+      // CTX!!!!!
+      // why context used
       //   ctx.startX = x.value;
     },
     onActive: (event, ctx) => {
@@ -69,15 +68,7 @@ const CircularSlider = () => {
     },
   });
 
-  // handlePanResponderRelease = () => {
-  //   this.setState({active: false});
-  //   const value = Math.floor(this.state.value / percentToDegrees);
-  //   const {onRelease} = this.props;
-  //   if (onRelease) {
-  //     onRelease(value);
-  //   }
-  // };
-
+  /* RENDER PROPS*/
   const startCoord = polarToCartesian(0);
   const endCoord = useDerivedValue(() => {
     return polarToCartesian(angle.value);
@@ -91,6 +82,8 @@ const CircularSlider = () => {
       cy: coords.y,
     };
   });
+
+  // useDerivedValue  ALSO created worklet and has issues with { atan }
 
   const animatedPathProps = useAnimatedProps(() => {
     // draw a circle
