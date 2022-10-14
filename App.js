@@ -16,7 +16,7 @@ import Bedtime from './src/Bedtime';
 import Darkroom, {assets as darkroomAssets} from './src/Darkroom';
 import LiquidSwipe, {assets as liquidSwipeAssets} from './src/LiquidSwipe';
 import YoutubeNavigator from './src/youtube/YoutubeNavigator';
-import Toggle from './src/Toggle';
+import CircularSliderReanimated from './src/CircularSliderReanimated';
 import SkateChallenge from './src/SkateChallenge/SkateList';
 import SkateDetail from './src/SkateChallenge/SkateDetail';
 import {Wallet} from './src/Skia/Wallet';
@@ -160,10 +160,10 @@ const AppNavigator = () => (
       }}
     />
     <Stack.Screen
-      name="Toggle"
-      component={Toggle}
+      name="CircularSliderReanimated"
+      component={CircularSliderReanimated}
       options={{
-        title: 'Toggle',
+        title: 'CircularSliderReanimated',
       }}
     />
     <Stack.Screen
@@ -195,7 +195,7 @@ const AppNavigator = () => (
       name="SkiaCircularSlider"
       component={SkiaCircularSlider}
       options={{
-        title: 'Wallet',
+        title: 'SkiaCircularSlider',
         gestureEnabled: false,
       }}
     />

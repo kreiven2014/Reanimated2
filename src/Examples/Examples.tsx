@@ -13,8 +13,12 @@ const examples = [
     title: 'SkiaCircularSlider',
   },
   {
+    screen: 'CircularSliderReanimated',
+    title: 'CircularSliderReanimated',
+  },
+  {
     screen: 'Wallet',
-    title: '🦉 Wallet',
+    title: '🦉 Wallet SKIA',
   },
   {
     screen: 'Duolingo',
@@ -67,10 +71,6 @@ const examples = [
   {
     screen: 'Youtube',
     title: '💧 Youtube',
-  },
-  {
-    screen: 'Toggle',
-    title: 'Toggle',
   },
   {
     screen: 'SkateChallenge',
